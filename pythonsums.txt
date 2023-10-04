@@ -148,4 +148,19 @@ if is_three_digit(num):
 else:
     print("The number is not three digits.")
 
-13)
+13)Accept 4 people age and display the oldest one?
+
+# Accepting ages from four people
+ages = []
+for i in range(4):
+    age = int(input(f"Enter age of person {i+1}: "))
+    ages.append(age)
+
+# Finding the oldest person
+oldest = max(ages)
+
+# Finding the index of the oldest person
+oldest_index = ages.index(oldest)
+
+# Printing the oldest person's details
+print(f"The oldest person is person {oldest_index+1} with an age of {oldest} years.")
