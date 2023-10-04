@@ -1,1 +1,151 @@
+                                    PYTHON CONDITIONAL STATEMENT PRACTICE
 
+1)Write a program to print whether a person eligible for voting or not based on the age input given by user?
+Ans:-
+
+#Lets get the input age from the user
+age=int(input("Enter your age:"))
+#lets make the program to allow if the age is above 18 then to allow vote, else
+#tell them about the eligiblity.
+if age>18:
+    print("Eligible to vote")
+else:
+    print("Your age should be atleast 18 complete to vote")
+
+2)Write a program to display"Hello" if the number given by the user is the multiple of 5 else print"Bye
+Ans:
+
+a = int(input("Enter the number:"))
+if a % 5 == 0:
+    print("Hello")
+else:
+    print("Bye")
+
+
+3)Write a programm to calculate the electricity bill(accept number of unit as input from user)according to the following criteria
+    Units           - Amount
+    100             -No cost/free
+    next 100        -5/unit
+    next 100        -10/unit
+
+Ans:
+amount=0
+unit=int(input("Enter the unit consumed:"))
+if unit<101:
+    amount=0
+elif 100<unit<201:
+    amount=(unit-100)*5
+elif 200<unit:
+    amount=500+(unit-200)*10
+print("The cost to pay for the consumed unit is:",amount)
+
+4)Write a program to display the last digit of a number?
+Ans:
+a=int(input("Enter the number:"))
+c=a%10
+print("The last digit of the number is: ",c)
+
+5)Write a program to check whether the last digit of a number given by user is divisible by 3 or not?
+Ans: 
+
+a=int(input("Enter the number:"))
+b=a%10
+if b%3==0:
+    print("Divisible by 3")
+else:
+    print("Not divisible by 3")
+
+6)Write a program to accept percentage from user and display the grade according to the following criteria:
+
+Marks           - grade
+>90             -A
+>80-<=90        -B 
+>=60->=80       -c 
+Below 60        -D 
+
+Ans:
+marks=int(input("Enter your mark:"))
+if 101>marks>90:
+    print("Grade is A")
+elif 80<marks<=90:
+    print("Grade is B")
+elif 60<marks<=80:
+    print("Grade is C")
+elif 0<marks<60:
+    print("Grade is D")
+
+7)Write a program to accept cost price of a bike and display the road tax to be paid according to the criteria:
+
+Cost price(Rs)          -tax
+>100000                  -15%
+>50000 and <=100000     -10%
+<=50000                 -5%
+
+Ans:
+tax=0
+bike_cost=int(input("Enter your bike cost:"))
+if bike_cost>100000:
+    tax=(bike_cost*15/100)
+elif 100000>=bike_cost>=50000:
+    tax=(bike_cost*10/100)
+elif bike_cost<50000:
+    tax=(bike_cost*5/100)
+print("The tax for your bike is ",tax)
+
+8)Write a program to check a year whether it is leap or not?
+
+year=int(input("Enter the year:"))
+if (year%4==0 and year%100!=0) or (year%400==0):
+    print("The year you entered is the leap year.")
+else:
+    print("The year you entered is not the leap year")
+
+9)Write a program to accept a number from 1 to 12 and display the name of the month and days in that month like
+1 for January and number of days 31 and so on.
+
+10)Write the logical expression of the following:
+A is greater than B and C is greater than D 
+
+Ans: A>b and C>d
+
+11)Accept city input from user and print the following:
+city    - Monument 
+Delhi   - Red Fort
+Agra    - Taj Mahal
+Jaipur  - Jal Mahal
+
+Ans: 
+monument=""
+city=input("Enter the city: ")
+if city=="Delhi":
+    monument="Red Fort"
+elif city=="Agra":
+    monument="Taj Mahal"
+elif city=="Jaipur":
+    monument="Jal Mahal"
+print("The monument in the city is: ",monument)
+
+12)Write a program to find a number whethe it is three digit or not?
+
+Ans: 
+a=int(input("Enter the number: "))
+if 100<=a<=999:
+    print("The number is three digit")
+else:
+    print("The number is not three digit")
+
+    or
+
+def is_three_digit(number):
+    if 100 <= number <= 999:
+        return True
+    else:
+        return False
+# Example usage
+num = int(input("Enter a number: "))
+if is_three_digit(num):
+    print("The number is three digits.")
+else:
+    print("The number is not three digits.")
+
+13)
