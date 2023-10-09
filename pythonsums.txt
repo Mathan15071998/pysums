@@ -29,6 +29,18 @@ else:
     next 100        -10/unit
 
 Ans:
+
+unit=int(input("Enter the number of units consumed:"))
+amount=0
+if unit<101:
+    amount=0
+elif 100<unit<201:
+    amount=(unit-100)*5
+elif unit>200:
+    amount=(unit-200)*10+500
+print("You consumed ", unit," unit so you need to pay ", amount)
+ 
+ or
 amount=0
 unit=int(input("Enter the unit consumed:"))
 if unit<101:
@@ -82,6 +94,20 @@ Cost price(Rs)          -tax
 <=50000                 -5%
 
 Ans:
+
+price=int(input("Enter your bike cost: "))
+tax=0
+if price>100000:
+    tax=price*15/100
+elif 50000<price<=100000:
+    tax=price*10/100
+elif price<=50000:
+    tax=price*5/100
+print("Tax you need to pay is ",tax)
+
+
+or
+
 tax=0
 bike_cost=int(input("Enter your bike cost:"))
 if bike_cost>100000:
@@ -164,8 +190,37 @@ oldest_index = ages.index(oldest)
 
 # Printing the oldest person's details
 print(f"The oldest person is person {oldest_index+1} with an age of {oldest} years.")
+ or 
+
+ a=[]
+for i in range(1,5):
+
+    b=int(input(f"Enter your age person {i}:"))
+    a.append(b)
+print(a)
+
+#lets find who is oldest
+oldest=max(a)
+print("The oldest is ",oldest)
+
+#lets find and print the index of that person
+index_oldest=a.index(oldest)
+print(f"The oldest person is the {index_oldest+1}th with the age of {oldest}")
 
 14)Write a program to accept input for 3 numbers and find which is the largest:
+
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+c=int(input("Enter the third number:"))
+if b<a>c:
+    print("The first number is the biggest which is ",a)
+elif a<b>c:
+    print("The second number is the biggest among 2 which is ",b)
+elif a<c>b:
+    print("The final number entered is the largest which is ",c)
+
+    or
+
 
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
@@ -181,4 +236,28 @@ else:
 print("The largest number is:", largest)
 
 
-15)
+15)Accept temperature in degree celcius  of water and check whether it is at boiling point or not?
+
+temperature=int(input("Enter the current temperature of water in celcius:"))
+if temperature>99:
+    print("The water is boiling now")
+else:
+    print("Yet, water reached its boiling state")
+
+16)Accept the age of 4 people and find the youngest one?
+
+a=[]
+for i in range(1,5):
+    b=int(input(f"Enter the age person{i}:"))
+    a.append(b)
+print(a)
+
+#lets find who is the youngest
+younger=min(a)
+print("The younger person is with the age of ", younger)
+
+#lets find and print the index of that person
+index_younger=a.index(younger)
+print(f"The youngest person in the given list is person {index_younger+1} with the age of ", younger)
+
+17)
