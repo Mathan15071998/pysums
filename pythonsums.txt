@@ -260,4 +260,13 @@ print("The younger person is with the age of ", younger)
 index_younger=a.index(younger)
 print(f"The youngest person in the given list is person {index_younger+1} with the age of ", younger)
 
-17)
+17)Write a program to find a number is prime or not?
+a = int(input("Enter a number: "))
+if a < 2:
+    print("The number is not prime")
+for i in range(2, a):
+    if a % i == 0:
+        print("The number is not prime")
+        break
+else:
+    print("The number is prime")
