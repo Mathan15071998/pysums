@@ -270,3 +270,92 @@ for i in range(2, a):
         break
 else:
     print("The number is prime")
+
+18)Write a program to check a character is a vowel or not?
+
+ch=input("Enter the character: ")
+vow="AEIOUaeiou"
+if ch in vow:
+    print("The character is vowel")
+else:
+    print("No vowels ")
+
+19)Accept input of total number of working days and absents from user and print whether they eligible to attend exams or not?
+eligiblity= attendence<=75 can attend exams.
+
+days=int(input("Enter the total number of working days: "))
+ab=int(input("Enter the total number of days absent: "))
+per=int((ab/days)*100)
+c=100-per
+print(f"The attendence percentage is {c}%")
+
+if c>=75:
+    print("You can sit for exams")
+else:
+    print("Your attendence is low so can't sit for this exam")
+
+20)Accept percentage from user and display the grade according to the criteria:
+
+>80  =A+
+60-80 =a
+50-60 =B+
+45-50 =B 
+25-45 =C 
+<25   =D 
+
+score=int(input("Enter your score: "))
+grade=""
+if score>80:
+    grade="A+"
+elif 60<score<=80:
+    grade="A"
+elif 50<score<=60:
+    grade="B+"
+elif 45<score<=50:
+    grade="B"
+elif 25<=score<=45:
+    grade="C"
+elif score<25:
+    grade="D"
+print("your grade is",grade)
+
+21)A company decided to give bonus to their employees according to the following criteria:
+
+>10years        -10%
+>=6 to >=10     -8%
+<6              -5%
+Ask user for their salary and years of experience  and print the net bonus amount.
+
+sal=int(input("Enter the salary: "))
+xp=int(input("Enter your years of experience: "))
+bonus=0
+
+if xp>10:
+    bonus=sal*10/100
+elif 6<=xp<=10:
+    bonus=sal*8/100
+elif xp<6:
+    bonus=sal*5/100
+print("Your net bonus amount would be",bonus)
+
+22)Accept the marked price from user and calculate the net amount as(Marked price-discount)to pay according to the following criteria:
+Marked price            -discount
+>10000                  -20%
+>7000 and <=10000       -15%
+<=7000                  -10%
+
+price=int(input("Enter the amount for purchased goods: "))
+dis=0
+net=0
+if price>10000:
+    dis=price*20/100
+    net=price-dis
+elif 7000<price<=10000:
+    dis=price*15/100
+    net = price - dis
+elif price<=7000:
+    dic=price*10/100
+    net = price - dis
+print("The discount you got for the purchase is",dis)
+print("The net amount you have to pay after the discount is",net)
+
