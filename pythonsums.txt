@@ -359,3 +359,138 @@ elif price<=7000:
 print("The discount you got for the purchase is",dis)
 print("The net amount you have to pay after the discount is",net)
 
+23)Write a program to accept percentage and display the Category
+according to the following criteria:
+
+percentage      -Category
+<40-failed
+>=40 and <55-Fair
+>=55 and <65-goods
+>=65-Excellent
+
+
+#Lets get the input percentage from user:
+per=int(input("Enter your percentage: "))
+#making the conditions to work based on the percentage.
+if per<40:
+    print("Failed")
+elif 40<=per<55:
+    print("Fair")
+elif 55<=per<65:
+    print("Good")
+elif per>=65:
+    print("Excellent")
+else:
+    print("Invalid percentage entered")
+
+24)Accept 3 sides of a triangle and check whether it is an 
+equilateral, isloceles or scalene triangle.
+Note:equilateral triangle in which all three sides are equal.
+A scalene triangle is a triangle that has three unequal sides.
+An isosceles triangle is a triangle with(atleast) two
+equal sides.
+
+#lets get 3 sides as s1,s2,s3
+s1=int(input("Enter the first side of triangle: "))
+s2=int(input("Enter the second side of triangle: "))
+s3=int(input("Enter the third side of triangle:" ))
+
+#Lets form the conditions:
+
+if s1==s2 and s2==s3:
+    print("This is an equilateral triangle")
+
+elif s1==s2 or s2==s3 or s1==s3:
+    print("This is an isosceles triangle")
+elif s1!=s2 and s2!=s3 and s3!=s1:
+    print("This is scalene triangle")
+
+25)Write a program to accept two numbers and mathematical
+operators and peerform operation accordingly.
+Like:
+Enter first number:7
+Enter second number:9
+Enter operator:+
+Your answer is:16
+
+#Get input for 2 numbers
+a=int(input("Enter the first number: "))
+b=int(input("Enter the second number:"))
+
+#condition operator input
+
+operation=input("Enter the type of operation to perform: ")
+if operation=="+":
+      print("Your answer is ",a+b)
+
+elif operation=="-":
+    print("Your answer is ", a-b)
+
+elif operation=="*" :
+    print("Your answer is ",a*b)
+
+elif operation=="/":
+    print("Your answer is ", a/b)
+
+26)Accept the age, sex('M' 'F'), number of days and display the wages 
+accordingly:
+
+age     -sex    -Wage/day
+>=18    M           700
+""      F           750
+>=30and 
+<=40    M           800
+""      F           850
+
+
+age=int(input("Enter your age: "))
+sex=input("Enter your gender: ")
+
+wages=0
+
+if 18<=age<30:
+    if sex=="Male" or sex=="male":
+        wage=700
+    else:
+        wage=750
+if 30<=age<=40:
+    if sex=="Male" or sex=="male":
+        wage=800
+    else:
+        wage=850
+else:
+    print("Enter appropriate age")
+
+print("Your wage per day is ", wage)
+
+
+27)Accept input for 3 numbers and find the which one is the second largest:
+
+a=int(input('Enter the first number : '))
+b=int(input('Enter the second number : '))
+c=int(input('Enter the third number : '))
+
+if (a>b and a<c) or (a<b and a>c):
+    print("The second largest number is the first number which is ",a)
+
+elif (b<a and b>c) or (b>a and b<c):
+    print("The second largest number is the second number you entered which is ", b)
+
+else:
+    print("Last number you entered is the second largest which is ",c)
+
+28)Accept three sides of triangle and check whether the triangle is 
+possible or not?
+(Triangle is possible only when 2 sides of it should be >3rd side)
+
+a=int(input("Enter the first side length: "))
+b=int(input("Enter the second side length: "))
+c=int(input("Enter the third side length: "))
+
+if (a<b and a<c) or (b<a and b<c) or (c<a and c<b):
+    print("Triangle is possible")
+
+else:
+    print("Triangle is not possible with this length")
+    
+29)
