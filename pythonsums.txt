@@ -525,3 +525,20 @@ c)i=8, j=15,k=12
 d)i=13 , j=15 , k=13
 e)i=3 , j=5 , k=17
 f)i=25 , j=15 , k=17
+
+30)Accept the kilometers covered and calculate the bill according to the following criteria:
+first 10km-11rs/kilometers
+next 90km-10rs/kilometers
+after that-9rs/kilometers
+
+Ans:
+
+km=int(input("Enter the kilometers:"))
+cost=0
+if km<11:
+    cost=km*11
+elif 10<km<101:
+    cost=(km-10)*10+110
+elif km>100:
+    cost=(km-100)*9+1010
+print("Your bill would be ", cost)
