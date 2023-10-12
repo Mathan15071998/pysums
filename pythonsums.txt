@@ -70,7 +70,7 @@ else:
 6)Write a program to accept percentage from user and display the grade according to the following criteria:
 
 Marks           - grade
->90             -A
+>90             -A.
 >80-<=90        -B 
 >=60->=80       -c 
 Below 60        -D 
@@ -283,6 +283,16 @@ else:
 19)Accept input of total number of working days and absents from user and print whether they eligible to attend exams or not?
 eligiblity= attendence<=75 can attend exams.
 
+a=int(input("Enter the total number of working days: "))
+b=int(input("Enter total number of taken leave: "))
+c=a-b
+if c>=75:
+    print("You are eligible to sit exams.")
+else:
+    print("You are not eligible to sit exams")
+    
+or 
+
 days=int(input("Enter the total number of working days: "))
 ab=int(input("Enter the total number of days absent: "))
 per=int((ab/days)*100)
@@ -493,4 +503,25 @@ if (a<b and a<c) or (b<a and b<c) or (c<a and c<b):
 else:
     print("Triangle is not possible with this length")
     
-29)
+29)consider the following code 
+
+if i<j:
+    if j<k:
+        i=j 
+    else:
+        j=k
+else:
+    if j>k:
+        j=i
+    else:
+        i=k
+print(i,j,k)
+
+what will the above code print if the variables i,j and k have the following values?
+
+a) i=3,j=5,k=7- answer is 5  5  7
+b)i=-2,j=-5,k=9 answer is 9  -5  9
+c)i=8, j=15,k=12
+d)i=13 , j=15 , k=13
+e)i=3 , j=5 , k=17
+f)i=25 , j=15 , k=17
