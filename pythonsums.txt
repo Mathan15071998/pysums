@@ -542,3 +542,5 @@ elif 10<km<101:
 elif km>100:
     cost=(km-100)*9+1010
 print("Your bill would be ", cost)
+
+
