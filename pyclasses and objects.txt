@@ -41,4 +41,287 @@ print("Lenovo Ram: ",lenovo.ram)
 print("Lenovo Processor: ",lenovo.processor)
 
 
-2)
+
+Note:  __init__ is a inbuild function in python which will be called automatically once the object 
+is created for a class.
+
+Using this constructor we can assign values without creating variables outside of a function.For instance,
+
+before we created like the following,
+
+class laptop:
+    price=""
+    ram=""
+    processor=""
+hp=laptop()
+dell=laptop()
+lenovo=laptop()
+#hp
+hp.price=10000
+
+instead we can also create like
+
+class laptop:
+    def __init__(self):
+        self.ram=""
+        self.price=""
+
+hp=laptop()
+hp.price=10
+hp.ram=5
+print(hp.ram)
+
+
+ example fol self keyword:
+
+class laptop:
+    def __init__(self):
+        self.ram=""
+        self.price=""
+    def display(self):
+        print("Processor: ",self.ram)
+        print("Price: ",self.price)
+hp=laptop()
+hp.ram="8 GB"
+hp.price=10
+hp.display()
+
+#here once I created the object called hp, it gained the access to init function by default
+#then when I assigned values to the to the object, by default it got assigned in init function
+#once I called the display function , it will start print the output here.
+#also "self" keyword always denotes the current object, so when I called hp.display()
+"""computer will store this hp.display ()as hp.display(hp), so by using keyword self
+denotes hp, so self.price means hp.price. Also, self can be used for multiple objects. For instance"""
+
+class laptop:
+    def __init__(self):
+        self.ram=""
+        self.processor=""
+    def display(self):
+        print("Price: ",self.price)
+        print("Processor: ",self.processor)
+hp=laptop()
+dell=laptop()
+hp.price="10000"
+hp.processor="8GB"
+hp.display()
+dell.price="5000"
+dell.processor="8GB"
+dell.display()
+
+
+
+2)Create an empty class
+    class laptop:
+        pass
+
+
+3)Create a class called student
+create a variable=name and regiser number using constructor.
+create a function called display which should display the name
+and register number of the student.
+
+#Creating class with student name
+class student:
+#Creating variables using constructor
+    def __init__(self):
+        self.name=""
+        self.register_number=""
+#creating function to return name and register number of the student
+    def display(self):
+        print("Name: ",self.name)
+        print("Register Number: ",self.register_number)
+s1=student()
+s1.name="Mathan"
+s1.register_number="18PENA023"
+s1.display()
+
+
+OR USING INPUT METHOD TO ASK NAME AND REGISTER NUMBER 
+
+#Creating class with student name
+class student:
+#Creating variables using constructor
+    def __init__(self):
+        self.name=""
+        self.register_number=""
+#creating function to return name and register number of the student
+    def display(self):
+        print("Name: ",self.name)
+        print("Register Number: ",self.register_number)
+s1=student()
+s1.name=input("Enter your name: ")
+s1.register_number=input("Enter your register number: ")
+s1.display()
+ 
+ or I can also create multiple objects here like
+ #Creating class with student name
+class student:
+#Creating variables using constructor
+    def __init__(self):
+        self.name=""
+        self.register_number=""
+#creating function to return name and register number of the student
+    def display(self):
+        print("Name: ",self.name)
+        print("Register Number: ",self.register_number)
+s1=student()
+s1.name=input("Enter your name: ")
+s1.register_number=input("Enter your register number: ")
+s1.display()
+
+s2=student()
+s2.name=input("Enter your name: ")
+s2.register_number=input("Enter your register number: ")
+s2.display()
+
+4) Create a class called Fruit
+Create a variable called color using __init__method
+create a object caleld apple pass the color variable
+as a parameter through object.
+
+#Creating the class
+class Fruit:
+#Here self will refer the object and col will store the value of red inside it.
+    def __init__(self,col):
+        self.color=col
+#Passing the color through object
+apple=Fruit("Red")
+#let's print apple.color=col (col=red)
+print(apple.color)
+
+5)Crete a class called teacher 
+create a variable =name and register number using constructor
+create a function called display which should display the name and register number
+of the teacher .
+create t1 and t2 object and pass the name and reg no value through object.
+
+#create a class
+class teacher:
+#creating variables using constructor method
+    def __init__(self,name,reg_no):
+        self.name=name
+        self.reg_no=reg_no
+    def display(self):
+        print("Name: ",self.name)
+        print("Register no: ",self.reg_no)
+t1=teacher("Mathan","1")
+t2=teacher("Vicky","2")
+t1.display()
+t2.display()
+
+6)Create a class called calculator
+create 2 variables a and b 
+create a function called add, sub, mul, div all functions should take
+2 variables as parameter.
+pass the a and b value thorugh object.
+
+class calculator:
+    def __init__(self,a,b):
+        self.num1=a
+        self.num2=b
+    def add(self):
+        print("Addition: ",self.num1+self.num2)
+    def sub(self):
+        print("Substraction: ",self.num1-self.num2)
+    def mul(self):
+        print("Multiplication: ",self.num1*self.num2)
+    def div(self):
+        print("Division: ",self.num1/self.num2)
+n1=int(input("Enter number 1: "))
+n2=int(input("Enter number 2: "))
+
+addi=calculator(n1,n2)
+addi.add()
+subs=calculator(n1,n2)
+subs.sub()
+mult=calculator(n1,n2)
+mult.mul()
+divi=calculator(n1,n2)
+divi.div()
+
+Output is -Enter number 1: 10
+Enter number 2: 10
+Addition:  20
+Substraction:  0
+Multiplication:  100
+Division:  1.0
+
+
+Class- Collection of functions and variables.
+Types- Instance and class
+Variables used inside the constructor is known as instance variable.
+Class variable- variable created outside of a function which can be used inside and outside of function.
+7)Create a class called phone
+create variables - brand,price and charger type
+create objects- Samsung and apple
+and create a function called display to display brand, price and ch type
+
+class phone():
+    def __init__(self,brand,price,ch):
+        self.brand=brand
+        self.price=price
+        self.ch=ch
+    def display(self):
+        print("Brand: ",self.brand)
+        print("Price: ",self.price)
+        print("Charger type: ",self.ch)
+samsung=phone("Samsung",10000,"B")
+samsung.display()
+Redmi=phone("Redmi",5000,"B")
+Redmi.display()
+
+Output is :Brand:  Samsung
+Price:  10000
+Charger type:  B
+Brand:  Redmi
+Price:  5000
+Charger type:  B
+
+What if I want to change charger type as "C" to all the brands
+
+
+class phone():
+    ch="C Type"
+    def __init__(self,brand,price):
+        self.brand=brand
+        self.price=price
+
+    def display(self):
+        print("Brand: ",self.brand)
+        print("Price: ",self.price)
+        print("Charger type: ",self.ch)
+samsung=phone("Samsung",10000,)
+samsung.display()
+Redmi=phone("Redmi",5000,)
+Redmi.display()
+Output is:Brand:  Samsung
+Price:  10000
+Charger type:  C Type
+Brand:  Redmi
+Price:  5000
+Charger type:  C Type
+
+I also can modify this value by 
+
+class phone():
+    ch="C Type"
+    def __init__(self,brand,price):
+        self.brand=brand
+        self.price=price
+
+    def display(self):
+        print("Brand: ",self.brand)
+        print("Price: ",self.price)
+        print("Charger type: ",self.ch)
+phone.ch="B type"
+samsung=phone("Samsung",10000,)
+samsung.display()
+Redmi=phone("Redmi",5000,)
+Redmi.display()
+output is:Brand:  Samsung
+Price:  10000
+Charger type:  B type
+Brand:  Redmi
+Price:  5000
+Charger type:  B type
