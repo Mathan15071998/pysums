@@ -325,3 +325,59 @@ Charger type:  B type
 Brand:  Redmi
 Price:  5000
 Charger type:  B type
+
+Functions- also known as methods
+
+
+                Types of Class methods
+    
+For an example,
+#Access instance variable and change the value
+
+class lap():
+    def __init__(self):
+        self.brand=""
+        self.price=1
+    def setprice(self,price):
+        self.price=price
+    def getprice(self):
+        print(self.price)
+
+hp=lap()
+hp.getprice()- here output will be 1, now we have to access the local variable and change the price
+
+WE CAN CHANGE THE PRICE OF THE EXISTING VALUE BY INSERTING PRICE INSTANCE AND CHANGE AS PER THE NEED Like
+class lap():
+    chargertype="BTYPE"
+    def __init__(self):
+        self.brand=""
+        self.price=1
+    def setprice(self,price):
+        self.price=price
+    def getprice(self):
+        print(self.price)
+
+hp=lap()
+hp.setprice(2)
+hp.getprice()
+
+NOW LET'S ACCESS THE CHARGERTYPE CLASS VARIABLE AND CHANGE IT TO THE C TYPE.
+
+class lap():
+    chargertype="B TYPE"
+    def __init__(self):
+        self.brand=""
+        self.price=1
+    def setprice(self,price):
+        self.price=price
+    def getprice(self):
+        print(self.price)
+    def changechtype(cls):
+        cls.chargertype="C type"
+        print("Chargertype changed to C")
+hp=lap()
+hp.setprice(2)
+hp.getprice()
+lap.changechtype(lap)
+
+                
