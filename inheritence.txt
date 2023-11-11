@@ -1,0 +1,207 @@
+                                        Inheritence and its Types
+
+#Inherit one class properties to another class
+
+class Dad():
+    def phone(self):
+        print("Dad's phone")
+
+class son():
+    def lap(self):
+        print("Son's laptop")
+
+ram=son()
+ram.lap()
+
+Can I access Dad class? Yes, we can by passing the class name we want to access inside the inheriting class.
+class Dad():
+    def phone(self):
+        print("Dad's phone")
+
+class son(Dad):
+    def lap(self):
+        print("Son's laptop")
+
+ram=son()
+ram.lap()
+ram.phone()- output will be, Son's laptop and Dad's phone.
+
+#One class inheriting another class's properties is known as single inheritence.
+
+#If one class inheriting multiple classes properties then it is called multiple inheritence.
+
+
+class Dad():
+    def phone(self):
+        print("Dad's phone")
+
+class mom():
+    def sweet(self):
+        print("Mom's sweet")
+
+class son(Dad,mom):
+    def lap(self):
+        print("Son's laptop")
+
+ram=son()
+ram.lap()
+ram.phone()
+ram.sweet()- output will be -Son's laptop
+Dad's phone
+Mom's sweet
+
+
+#Multilevel inheritence
+
+class grandpa():
+    def phone(self):
+        print("Grandpa's phone")
+
+class dad(grandpa):
+    def money(self):
+        print("Dad's money")
+
+class son(dad,grandpa):
+    def laptop(self):
+        print("Son's laptop")
+
+ram=son()
+ram.laptop()
+ram.money()
+ram.phone()
+Mathan=dad()
+Mathan.phone()- output will be :Son's laptop
+Dad's money
+Grandpa's phone
+Grandpa's phone
+
+class grandpa():
+    def phone(self):
+        print("Grandpa's phone")
+
+class dad(grandpa):
+    def money(self):
+        print("Dad's money")
+
+class son(dad):
+    def laptop(self):
+        print("Son's laptop")
+
+ram=son()
+ram.laptop()
+ram.money()
+ram.phone()
+Mathan=dad()
+Mathan.phone()-here son class can access grandpa's phone directly.
+
+#When 2 or more classes inherit one class's properties then it is called hierarchieal inheritence.
+
+class dad():
+
+    def money(self):
+        print("Dad's money")
+
+
+class son(dad):
+    pass
+
+
+class son1(dad):
+    pass
+
+
+class son2(dad):
+    pass
+
+
+s = son()
+s.money()
+
+
+#when all kinds of inheritence comes at the same time is known as hybrid inheritence.
+
+class dad():
+
+    def money(self):
+        print("Dad's money")
+
+class land():
+    def important(self):
+        print("This is for son")
+class son(dad,land):
+    pass
+
+class son1(dad):
+    pass
+
+class son2(dad):
+    pass
+
+s = son()
+s.money()
+s.important()
+
+
+
+                                    SuperKeyword in python
+
+class a():
+    def __init__(self):
+        print("A")
+class b():
+    def __init__(self):
+        print("B")
+o1=b()- output will be "B".
+ what if b derives a?
+
+ class a():
+    def __init__(self):
+        print("A")
+class b(a):
+    def __init__(self):
+        print("B")
+o1=b()
+- output will be the same here, if b has no constructor then it will print what is inside the a class
+constructor. Can I bring the properties of a class even though b class has the constructor? Yes by using 
+SuperKeyword in python.
+
+class a():
+    def __init__(self):
+        print("A")
+class b(a):
+    def __init__(self):
+        super().__init__()
+        print("B")
+o1=b()
+- now output will print both A and B.
+
+What will happen if the class has multiple inheritence?
+class a():
+    def __init__(self):
+        print("A")
+class b():
+    def __init__(self):
+        super().__init__()
+        print("B")
+class c(a,b):
+    def __init__(self):
+        super().__init__()
+        print("C")
+o1=c()- here out put will be "A" and "c", because here class c(a,b), b will be ignored, only what is in the left
+will be inherited along with the class we call like in this case it's c.
+
+
+class a():
+    def __init__(self):
+        print("A")
+class b():
+    def __init__(self):
+        super().__init__()
+        print("B")
+class c(b,a):
+    def __init__(self):
+        super().__init__()
+        print("C")
+o1=c()-here output will print all the abc, because b constructor has SuperKeyword function which will 
+inherit from a so all the abc will be printed, if b has no SuperKeyword function, then only b and c will be printed.
+

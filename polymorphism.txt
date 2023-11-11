@@ -1,0 +1,35 @@
+                                                Polymorphism
+
+        In programming, Polymorphism means the same function name(but different signatures ) used for different types.
+ The key difference is the data types and number of arguments used in function.For instance,
+def add(a,b,c=0):
+    print(a+b+c)
+add(10,40)
+add(10,40,20)
+
+
+"""Create a class called Animal with a method sound()
+ that prints "Animal makes a sound." Create a derived class
+ called Dog that inherits from Animal and overrides the sound() method to print
+ "Dog Barks." Create another derived class called Bird that inherits from
+ Animal and overrides the sound() method to print "Birds Sing"."""
+
+class animal():
+    def sound(self):
+        print("Animal makes a sound")
+class dog(animal):
+    def sound(self):
+        print("Dog barks")
+class bird(animal):
+    def sound(self):
+        print("Birds sing")
+
+a=animal()
+a.sound()
+
+b=dog()
+b.sound()
+
+c=bird()
+c.sound()- this is also known as Polymorphism because one function overides another function based on the
+location of the class.
