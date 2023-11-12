@@ -1,0 +1,161 @@
+                                        ERROR HANDLING
+
+ 1)Compiletime error: Thie error occurs during the compilation, this happens because of incorrect 
+ syntax mostly.
+            print("Mathan")  -Mathan
+            prinntt("Mathan) -Name error
+2)Logical error:
+    Due to lack of logics, throughing error is known as logical error.
+    a=10
+    b=20
+    print(a+a)-20, instead of getting output 30, I got 20. this is logical error.
+
+3)Runtime error:
+
+    a=int(input())-10
+    b=int(input())-hi
+    print(a+b)------can't merge string with integer. This will through huge line's of error instead.
+
+compilation error and logical error is controled by the Developer while runtime error happens from user end
+based on their inputs. To control what error user should see, we use error handling.
+
+try:
+    a= int(input("Enter number a: "))        -10
+    b= int(input("Enter number b: "))        -hi
+    print("Sum of the 2 number is: ",a+b)    -Something is wrong
+except Exception:
+    print("Something is wrong,try again")
+
+
+
+    try:
+    a= int(input("Enter number a: "))
+    b= int(input("Enter number b: "))
+    print("Sum of the 2 number is: ",a+b)
+except Exception as e:
+    print("Something is wrong,try again",e)-
+
+Enter number a: 10
+Enter number b: hi
+Something is wrong,try again invalid literal for int() with base 10: 'hi'
+
+
+
+
+try:
+    a= int(input("Enter number a: "))
+    b= int(input("Enter number b: "))
+    c=input()
+    print(c/a)
+except ValueError as e:
+    print("value error",e)
+
+
+Enter number a: 10
+Enter number b: 20
+hi-- it will through new type error , we can handle this by,
+
+
+
+try:
+    a= int(input("Enter number a: "))
+    b= int(input("Enter number b: "))
+    c=input()
+    print(c/a)
+except ValueError as e:
+    print("value error",e)
+except TypeError as e:
+    print("Type error",e)
+Enter number a: 10
+Enter number b: 20
+hi
+Type error unsupported operand type(s) for /: 'str' and 'int'
+
+
+
+
+try:
+    a= int(input("Enter number a: "))
+    b= int(input("Enter number b: "))
+    c=input()
+
+    print(d)
+except ValueError as e:
+    print("value error",e)
+except TypeError as e:
+    print("Type error",e)
+
+-through name error
+
+
+try:
+    a= int(input("Enter number a: "))
+    b= int(input("Enter number b: "))
+    c=input()
+
+    print(d)
+except ValueError as e:
+    print("value error",e)
+except TypeError as e:
+    print("Type error",e)
+
+except  Exception :
+    print("Something wrong")
+
+Enter number a: 10
+Enter number b: 20
+hi
+Something wrong
+
+
+- here exception will work for any error.
+
+
+    a= int(input("Enter number a: "))
+    b= int(input("Enter number b: "))
+  
+except ValueError as e:
+    print("value error",e)
+except TypeError as e:
+    print("Type error",e)
+
+except  Exception :
+    print("Something wrong")
+
+finally:
+    print("Done")
+
+Enter number a: 10
+Enter number b: 20
+Done
+
+try:
+    a= int(input("Enter number a: "))
+    b= int(input("Enter number b: "))
+
+except ValueError as e:
+    print("value error",e)
+except TypeError as e:
+    print("Type error",e)
+
+except  Exception :
+    print("Something wrong")
+
+finally:
+    print("Done")
+
+
+Enter number a: 10
+Enter number b: hi
+value error invalid literal for int() with base 10: 'hi'
+Done
+
+
+-here finally will work for both sitatuation, when program has error and in the times when program has no error.
+
+
+
+
+
+
+

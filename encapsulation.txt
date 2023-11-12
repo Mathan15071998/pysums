@@ -28,3 +28,35 @@ from outside of the class.
 here if the variable like following then it's public.
 self.companyname="Google"
 
+if the variable has only one underscore then it is called protected.
+
+Protected variables can be accessed by outside of the class and even with the help of child classes.
+
+class company():
+    def __init__(self):
+        self._companyname="Google"
+
+c=company()
+
+print(c._companyname)- out put "Google"
+
+
+
+
+using child class:
+
+class company():
+    def __init__(self):
+        self._companyname="Google"
+
+
+
+class child(company):
+    pass
+
+c=child()
+
+print(c._companyname)- here also output is Google.
+
+
+
