@@ -1,0 +1,30 @@
+                                Encapsulation
+                                        
+1)Private variables can be acceesed only by the functions within the class
+  for an example,
+
+class company():
+    def __init__(self):
+        self.companyname="Google"
+c=company()
+print(c.companyname)              -here output will be "Google"
+
+to protect the companyname and prevent access to others, we need to protect the variable by making it private.
+
+using "__" (double underscores before the variable will make it as a private. This could be only accessed 
+by the functions within the same class.)
+
+
+class company():
+    def __init__(self):
+        self.__companyname="Google"
+    def display(self):
+        print(self.__companyname)
+c=company()
+c.display()
+print(c.__companyname)- output will be "Google" and through error for tried to access the private variable 
+from outside of the class.
+
+here if the variable like following then it's public.
+self.companyname="Google"
+
