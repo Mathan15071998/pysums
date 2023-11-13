@@ -1,0 +1,42 @@
+create a folder- create a file (.txt)
+create a new python file and save it in the folder where file exist.
+
+commands:
+
+    variable=filename.txt
+    print(variable)- will give like mode=r
+
+    so we need to give the command of variable.read will help us to open and read the content.
+
+    variable=filename.txt
+    print(variable.read())
+
+
+    now if I want to add something,
+
+    variable.write()
+
+    print(variable)- will give the mode of the file whether it's writeable or readable
+
+    we can also change the mode by , variable=open("variable.txt","w")
+
+
+    whenever the write() method used, older data will be replaced with new data
+    variable.close()-to close the file
+
+
+    "variable.extension","r+"- allows us to both read and write the file.
+
+
+
+    f=open("fh.txt","a")
+f.write("hi")
+f.write("Hello")
+f.close()
+
+f=open("fh.txt","r+")
+print(f.read())
+
+here using a after the extension allows us to write the data without replacing the older data.
+
+variable.readline()- allows us to print the first line in the file.
